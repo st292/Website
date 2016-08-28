@@ -1,0 +1,206 @@
+html {
+    height:100%;
+}
+
+body {
+    background-color:white;
+    overflow-x: hidden;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height:100%;
+}
+
+main .loaders .loader {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    height: 200px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.ball-scale-ripple-multiple {
+    margin: auto;
+    width: 10%;
+}
+
+.ball-scale-ripple-multiple>div:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.ball-scale-ripple-multiple>div:nth-child(2) {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+.ball-scale-ripple-multiple>div:nth-child(3) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+.ball-scale-ripple-multiple>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    -webkit-animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21,.53,.56,.8);
+    animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21,.53,.56,.8);
+}
+
+
+#open{
+    background-image: url("background.jpg"); /*https://warunakarunaratne.files.wordpress.com/2011/10/anatomy-lungs.jpg*/
+    background-size:cover;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index:2; /*sets this div above the background*/
+}
+
+#circle{
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    width: 375px;
+    height: 375px;
+    padding:25px;
+    box-shadow: 0px 0px 40px; /*adds drop shadow*/
+    background: white;
+    border-radius: 50%;
+    border: 3px solid white;
+    opacity: 0.8;
+    display:none;
+    z-index:3; /*sets this div above the #open div*/
+    -webkit-transition: all 0.5s;
+    -webkit-transform: scale(1);
+    transition: all 0.5s ease-in;
+    transform: scale(1);
+}
+
+#circle:hover{
+    -webkit-transition: all 0.5s;
+    -webkit-transform: scale(1.05);
+    transition:0.5s;
+    transform: scale(1.05);
+    cursor:pointer;
+}
+
+#menu{
+    background:#252328;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    widows: 60%;
+}
+
+h1{
+	color:#2c2c2c;
+	font:50px century gothic;
+	text-align:center;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: 0%;
+}
+
+h2{
+	color:#2c2c2c;
+	font:40px Garamond;
+	text-align:center;
+}
+
+h3{
+    color: white;
+    font: 100px century Gothic;
+    text-align: center;
+    line-height: 1;
+}
+.one{
+    color:#2c2c2c;
+	font:30px century gothic;
+	text-align:center;
+    margin: 12px;
+}
+
+.two{
+    color:#2c2c2c;
+    font: 25px Garamond;
+    line-height: 150%;
+}
+
+#top{
+    background-image:url(neurons.jpg); /*http://images.medicaldaily.com/sites/medicaldaily.com/files/2014/08/27/neurons.jpg*/
+    background-repeat: no-repeat;
+    padding: 3px;
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    width: 100%
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#main{
+	background-color:white;
+	margin-left: auto;
+	margin-right: auto;
+	/*box-shadow: 0px 0px 40px black; adds drop shadow*/
+	width:65%;
+	height:100 vh;
+	padding:30px;
+}
+
+a{
+	font:20px Century gothic;
+	color:white;
+	padding:5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+a:hover{
+	background-color:#160600;
+}
+
+a:link{
+	text-decoration:none;
+}
+
+a:visited{
+	text-decoration:none;
+}
+
+::selection {
+    background: #ea504e; 
+    color: white;
+}

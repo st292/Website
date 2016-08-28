@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <link rel='shortcut icon' href='icon.ico' type='image/x-icon'/ >
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){
+                $('#circle').delay(500).fadeIn(2000).removeClass('hidden'); //for fadeIn() on page load http://stackoverflow.com/questions/21360519/jquery-fadein-on-page-load
+                $('#circle').click(function(){
+                    $("#open").slideUp("slow");
+                });
+               var sourceSwap = function () {
+                   var $this = $(this);
+                   var newSource = $this.data('alt-src');
+		      	   $this.data('alt-src', $this.attr('src'));
+		      	   $this.attr('src', newSource);
+		          }
+               $(function () {
+		      	   $('img.icon').hover(sourceSwap, sourceSwap);
+               });
+            });
+        </script> 
+
+    </head>
+    <body>
+        <div id="open"> 
+            <div id="circle">
+                <br/>
+                <br/>
+                <h1>The Anatomy Guide</h1>
+                <p class="one" style="font-size:17px"><i>"Gangbang them books"</i></p>
+                <p class="one" style="font-size:17px">~Some rando in <i>Straight Outta Compton</i></p>
+                <p class="one" style="margin-top:25px">Click to Enter</p>
+            </div>
+        </div>
+        <div id="top">
+            <!--<div id="icons"> 
+                <a href="mailto:thakkar.shveta97@gmail.com">
+                    <img class="icon" data-alt-src="email.png" src="emailbrown.png" style="height:30px; width:30px;"/>
+                </a>
+                <a href="https://quizlet.com/class/1738126/" target="_blank">
+                    <img class="icon" data-alt-src="quizlet.png" src="quizletbrown.png" style="height:30px; width:30px;"/>
+                </a>
+            </div>-->
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h3>The Anatomy Guide</h3>
+        </div>
+        <div id="menu">
+            
+        </div>
+        <!--<nav>
+            <a href="index.html">Home</a>		
+            <a href="exam1.html">Exam 1</a>		
+            <a href="exam2.html">Exam 2</a>		
+            <a href="exam3.html">Exam 3</a>
+        </nav>-->
+        <div id="main">
+            <br/>
+            <h2>Ayy bitches it's time to learn some anatomy</h2>
+            <br/>
+            <img src="gray.jpg" style="display:block; margin-left:auto; margin-right:auto; border:3px solid black;"/>
+            <br/>
+            <p class="two">Just kidding, the purpose of this website is actually to supplement lectures and hopefully assist in test prep. Content is divided by exam in the links above. Currently, there is only content for Exam 2 since that's the nearest assessment, but the other pages will be filled nearer to finals week. <br/><br/>If you have any questions or find incorrect information, click the mail icon in the upper right corner and shoot me a message. The other icon is a link to the class Quizlet page for easy access. Have fun studying and don't die (but if you do we might actually have cadavers for anatomy lab)!</p>
+            <img src="comic.jpg" style="display:block; margin-left: auto; margin-right:auto"/>
+            <p class="two" style="font-size:13px">Disclaimer: Website is for educational purposes only. It is not affiliated with any institution. Content sources are listed either by the pictures or within the source code.</p>
+        </div>
+    </body>
+</html>
